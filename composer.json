@@ -1,0 +1,27 @@
+{
+    "autoload": {
+        "psr-4": {"Didando8a\\Plentific\\": ["src/", "tests/unit",
+            "tests/integration"
+        ] }
+    },
+    "name": "didando8a/plentific-codetest",
+    "description": "Library to provide a service for creating and retrieving users via a remote API",
+    "authors": [
+        {
+            "name": "Diego Daniel Dorado Ochoa",
+            "email": "didando8a@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">=8.2",
+        "phpunit/phpunit": ">=11.0.4",
+        "guzzlehttp/guzzle": "^7.0",
+        "json-mapper/json-mapper": "^0.0.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10"
+    },
+    "config": {
+        "process-timeout":0
+    }
+}
