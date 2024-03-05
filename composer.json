@@ -19,7 +19,8 @@
         "json-mapper/json-mapper": "^0.0.1"
     },
     "require-dev": {
-        "phpstan/phpstan": "^1.10"
+        "phpstan/phpstan": "^1.10",
+        "friendsofphp/php-cs-fixer": "^3.51"
     },
     "config": {
         "process-timeout":0

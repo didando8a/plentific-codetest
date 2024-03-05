@@ -11,10 +11,16 @@ composer-dump-autoload:
 	docker compose run app composer dump-autoload
 
 composer-install-one:
-	docker compose run app composer require json-mapper/json-mapper
+	docker compose run app composer require --dev friendsofphp/php-cs-fixer
+
+style-fix:
+	docker compose run app ./vendor/bin/php-cs-fixer fix
+
+style-check:
+	docker compose run app ./vendor/bin/php-cs-fixer fix --dry-run --diff
 
 test-unit: build composer-install
-	docker compose run app ./vendor/bin/phpunit -vvv tests/unit/
+	docker compose run app ./vendor/bin/phpunit tests/unit/
 
 test-integration: build composer-install
 	docker compose run app ./vendor/bin/phpunit tests/integration/
@@ -24,7 +30,4 @@ container-bash: build
 
 run-analyse:
 	docker compose run app vendor/bin/phpstan analyse -c phpstan.neon
-
-run-application:
-	docker compose run app ./console lendinvest:investors-loan
 

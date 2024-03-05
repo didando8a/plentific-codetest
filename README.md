@@ -1,6 +1,6 @@
-# LendInvest
+# Plentific
 
-lendinvest is an test application to calculate earn for investors when invest in a loan
+Library to provide a service for creating and retrieving users via a remote API
 
 ## Required
 
