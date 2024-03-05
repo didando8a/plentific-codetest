@@ -5,16 +5,16 @@
          cacheDirectory=".phpunit.cache"
          executionOrder="depends,defects"
          requireCoverageMetadata="false"
-         beStrictAboutCoverageMetadata="true"
+         beStrictAboutCoverageMetadata="false"
          beStrictAboutOutputDuringTests="true"
          failOnRisky="true"
          failOnWarning="true"
          colors="true">
     <testsuites>
-        <testsuite name="integration">
+        <testsuite name="Integration">
             <directory>integration</directory>
         </testsuite>
-        <testsuite name="unite">
+        <testsuite name="Unit">
             <directory>unit</directory>
         </testsuite>
     </testsuites>

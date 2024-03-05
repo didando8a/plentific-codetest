@@ -24,5 +24,24 @@
     },
     "config": {
         "process-timeout":0
+    },
+    "scripts": {
+        "check:phpstan": "phpstan analyse",
+        "check:rector": "rector process src/ tests/ config/ features/bootstrap/ --dry-run",
+        "check:standards": "phpcs src/ --report-full --report-summary",
+        "check:styles": "php-cs-fixer fix --dry-run --diff",
+        "check:vardump": "var-dump-check --symfony --doctrine src/ config/ tests/",
+        "fix:rector": "rector process src/ tests/ config/ features/bootstrap/",
+        "fix:styles": "php-cs-fixer fix",
+        "lint:php": "parallel-lint src/ config/ tests/",
+        "lint:yaml": "console lint:yaml --parse-tags src/ config/",
+        "tests-all": [
+            "@check:styles",
+            "@check:phpstan",
+            "@tests-unit",
+            "@tests-integration"
+        ],
+        "tests-integration": "phpunit --testsuite=Integration",
+        "tests-unit": "phpunit --testsuite=Unit"
     }
 }

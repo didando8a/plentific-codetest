@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Didando8a\Plentific\DTO;
 
+use PHPUnit\Framework\Attributes\CoversNothing;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -11,6 +12,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @coversNothing
  */
+#[CoversNothing]
 class UserDtoTest extends TestCase
 {
     public function testUserDtoFromUserInfo(): void
