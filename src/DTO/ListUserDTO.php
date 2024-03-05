@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Didando8a\Plentific\DTO;
 
-class ListUserDTO
+readonly class ListUserDTO
 {
     private function __construct(
         public int $page,
