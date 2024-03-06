@@ -4,7 +4,35 @@ Library to provide a service for creating and retrieving users via a remote API
 
 ## How to install
 
-Skipped due to the specifications of the code test but it could be installed either from github or pushing the package to packagist
+In your composer.json add the repository in the `repositories` section 
+
+```php
+{
+    ...
+    "repositories": [    {
+            "type": "vcs",
+            "url":  "git@github.com:didando8a/plentific-codetest.git"
+        }],
+    ...
+}
+```
+
+Once this is done the library can be added either running `composer require "didando8a/plentific-codetest":"dev-main`
+
+or by adding it manually into th `require`section
+
+```php
+{
+    ...
+    "require": {    "php" : ">=8.2",
+        "phpunit/phpunit": ">=9.4.3",    "symfony/console": "^5.1",
+        "didando8a/plentific-codetest": "dev-main"
+    }
+    ...
+}
+```
+
+Then run `composer install`
 
 
 
